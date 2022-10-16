@@ -6,7 +6,7 @@ from training.DataQueue import DataQueue
 
 class TestDataQueue(TestCase):
     def test_dataqueue(self):
-        data = DataContainer('sn2_reactions.npz')
+        data = DataContainer('../sn2_reactions.npz')
         data_provider = DataProvider(data, 40000, 500,
                              16, 4, 42)
         data_queue = DataQueue(data_provider.next_batch,
